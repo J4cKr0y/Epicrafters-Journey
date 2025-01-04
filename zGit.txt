@@ -1,0 +1,52 @@
+Git init
+Git add
+Git commit
+git remote add origin https://github.com/nom-utilisateur/nom-repository.git
+git push -u origin master
+
+---
+
+# Créer et basculer sur une nouvelle branche
+git checkout -b nouvelle-branche
+
+# Faire des modifications, puis ajouter et committer les changements
+git add .
+git commit -m "Ajout de nouvelles fonctionnalités"
+
+# Pousser la nouvelle branche vers le dépôt distant
+git push origin nouvelle-branche
+
+git stash
+
+# Basculer sur la branche principale et la mettre à jour
+git checkout master
+git pull origin master
+
+# Fusionner la nouvelle branche avec la branche principale
+git merge nouvelle-branche
+
+# Pousser les modifications fusionnées vers le dépôt distant
+git push origin master
+
+---
+
+fix: Represents a bug fix for your application.
+feature / feat: Adds a new feature to your application or library.
+refactor: A code change that neither fixes a bug nor adds a feature.
+deploy: Changes related to the deployment process.
+chore: Upgrades libraries and/or performs maintenance tasks.
+docs: Documentation-only changes.
+test: Adding missing tests or correcting existing tests.
+
+Close #10, close #123
+
+---
+
+npm install gh-pages --save-dev
+dans package.json ajouter-> "homepage":"adresse github.io" 
+(après private mais peu importe), 
+dans script "predeploy" :"npm run build" 
+et "deploy" :"gh-pages -d build". 
+Dans le terminal npm run deploy. 
+Git Add, commit "deploy", push. 
+Sur github:settings, pages, adresse du site.
