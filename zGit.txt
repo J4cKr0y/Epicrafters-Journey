@@ -1,8 +1,9 @@
 Git init
-Git add
+Git add (si fichier ajouter par erreur : git reset example.txt)
 Git commit
 git remote add origin https://github.com/nom-utilisateur/nom-repository.git
-git push -u origin master
+git branch pour savoir si on est sur main ou master
+git push -u origin master 
 
 ---
 
