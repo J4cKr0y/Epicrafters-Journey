@@ -35,8 +35,12 @@ public class Main {
 		int[] chiffreDontOnDoitCompterLesZero = {26, 10, 1985, 0, 12, 11, 1955};
 		combienYaDeZero(chiffreDontOnDoitCompterLesZero);
 //class
-		Bloc unBloc = new Bloc(); //instanciation avec le mot clé new
+		Bloc unBloc = new Bloc(2,3,4); //instanciation avec le mot clé new
 		unBloc.afficherDescription();
+		unBloc.afficherVolume();
+//heritage
+		Mur unBlocMur = new Mur(10,10,5,true);
+        unBlocMur.afficherBloc();
 	}
 
 	public static int addition(final int entier1, final int entier2) {
