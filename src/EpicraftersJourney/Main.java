@@ -41,6 +41,7 @@ public class Main {
 //heritage
 		Mur unBlocMur = new Mur(10,10,5,true);
         unBlocMur.afficherBloc();
+        unBlocMur.afficherDescription();
 	}
 
 	public static int addition(final int entier1, final int entier2) {

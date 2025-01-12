@@ -17,4 +17,9 @@ public class Mur extends Bloc {
                 super.hauteur + " " +
                 this.porteur);
         }
+        
+        @Override
+        public void afficherDescription() {
+            System.out.println("Ceci est un mur !");
+        }
 }
