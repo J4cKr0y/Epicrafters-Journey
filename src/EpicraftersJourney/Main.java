@@ -11,6 +11,7 @@ public class Main {
 		num=5;
 		num=10;
 		final int immuable=20;
+		System.out.println(num+immuable);
 
 		String langage="Java";
 		String phrase=langage + " est un langage de programmation.";
@@ -34,16 +35,40 @@ public class Main {
 		
 		int[] chiffreDontOnDoitCompterLesZero = {26, 10, 1985, 0, 12, 11, 1955};
 		combienYaDeZero(chiffreDontOnDoitCompterLesZero);
+/* On ne peut plus appeler (instance) Bloc après l'avoir rendu abstrait
 //class
 		Bloc unBloc = new Bloc(2,3,4); //instanciation avec le mot clé new
 		unBloc.afficherDescription();
 		unBloc.afficherVolume();
+*/		
 //heritage
-		Mur unBlocMur = new Mur(10,10,5,true);
+		Mur unBlocMur = new Mur(10,10,5,true); //instanciation avec le mot clé new
         unBlocMur.afficherBloc();
         unBlocMur.afficherDescription();
-	}
+        unBlocMur.afficherVolume();
+        
+//injection de dépendance
+    	IBloc murCostaud = new Mur(100,100,100,true); // un mur costaud!
+        Rempart rempartNord = new Rempart(murCostaud); // injection de l’instance mur dans l’instance pour le rempart au nord
 
+// utilisation de record (class immuable)
+        var terre = new Planete("Terre", 40075.017, 510067420); 
+        System.out.println(terre.nom()); // affiche Terre
+        terre.afficher();
+        
+// utilisation de l'enum Couleur (liste)
+        Couleur choixCouleur = Couleur.VERT;
+        switch(choixCouleur) {
+        case BLEU -> System.out.println("Pour des blocs représentant l'eau");
+        case VERT -> System.out.println("Pour des blocs représentant l’herbe, les feuilles, etc.");
+        case GRIS -> System.out.println("Pour des blocs représentant le sol ou un mur");
+        case MARRON -> System.out.println("Pour des blocs représentant la terre ou un toit");
+        case NOIR -> System.out.println("Pour des blocs représentant une roche");
+        default -> System.out.println("Je ne sais pas à quoi sert cette couleur.");
+        }
+}
+
+    
 	public static int addition(final int entier1, final int entier2) {
 		return entier1+entier2;
 	}

@@ -18,6 +18,11 @@ public class Mur extends Bloc {
                 this.porteur);
         }
         
+        public boolean estTraversable() {
+        		return !porteur; 	
+        }
+        
+// polymorphisme : redefinition de afficherDescription(de mere Bloc) avec override        
         @Override
         public void afficherDescription() {
             System.out.println("Ceci est un mur !");

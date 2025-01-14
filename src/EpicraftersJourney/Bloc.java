@@ -1,6 +1,6 @@
 package EpicraftersJourney;
 
-public class Bloc {
+public abstract class Bloc implements IBloc { //implementation de l'interface
 	protected int longueur;
 	protected int largeur;
 	protected int hauteur;
@@ -31,7 +31,7 @@ public class Bloc {
 	}	
     
 	
-	void afficherDescription() {
+	public void afficherDescription() {
         System.out.println(description);
     }
 	void afficherVolume() {
