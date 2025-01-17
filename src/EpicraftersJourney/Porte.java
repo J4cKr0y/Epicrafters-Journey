@@ -7,6 +7,7 @@ public class Porte extends Bloc {
 		// appel du constructeur de la classe mère avec le pot clef super
 		    	super(longueur, largeur, hauteur); 
 		    	this.verrouille = verrouille;
+		    	this.couleur = Couleur.BLEU;
 		        }
 	
 	public boolean estVerrouillee() {

@@ -5,13 +5,14 @@ public abstract class Bloc implements IBloc { //implementation de l'interface
 	protected int largeur;
 	protected int hauteur;
 	protected String description;
+	protected Couleur couleur;
     
     
     public Bloc(final int longueur, final int largeur, final int hauteur) {
     	this.description="Ceci est un bloc du jeu Epicrafter's Journey";
     	this.longueur = longueur;
 		this.largeur = largeur;
-		this.hauteur = hauteur;
+		this.hauteur = hauteur; 
     }
     
   
@@ -29,6 +30,10 @@ public abstract class Bloc implements IBloc { //implementation de l'interface
 	public int getHauteur() {
 		return hauteur;
 	}	
+	
+	public void setCouleur(Couleur couleur) {
+		this.couleur = couleur;
+	}
     
 	
 	public void afficherDescription() {

@@ -1,3 +1,4 @@
+//EnumCouleur.java
 package EpicraftersJourney;
 
 public enum Couleur {

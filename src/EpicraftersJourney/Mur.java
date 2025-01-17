@@ -8,6 +8,7 @@ public class Mur extends Bloc {
 // appel du constructeur de la classe mère avec le pot clef super
     	super(longueur, largeur, hauteur); 
     	this.porteur = porteur;
+    	this.couleur = Couleur.GRIS;
         }
         
         public void afficherBloc() {
@@ -15,7 +16,8 @@ public class Mur extends Bloc {
                 super.longueur + " " +
                 super.largeur + " " +
                 super.hauteur + " " +
-                this.porteur);
+                this.porteur + " " +
+                this.couleur);
         }
         
         public boolean estTraversable() {
