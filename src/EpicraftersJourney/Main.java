@@ -1,7 +1,12 @@
 package EpicraftersJourney;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -66,6 +71,62 @@ public class Main {
         case NOIR -> System.out.println("Pour des blocs représentant une roche");
         default -> System.out.println("Je ne sais pas à quoi sert cette couleur.");
         }
+                
+        List<Integer> quantiteBlocsUtilises= new ArrayList<Integer>();
+        quantiteBlocsUtilises.add(1);
+        quantiteBlocsUtilises.add(3);
+        quantiteBlocsUtilises.add(1); // doublon autorisé
+        for(Integer quantite : quantiteBlocsUtilises) {
+        	System.out.println(quantite);
+        }
+        quantiteBlocsUtilises.remove(Integer.valueOf(3));                               
+
+        Set<String> motsCles = new LinkedHashSet<String>(); //LinkedHashSet maintien l'ordre des elements
+        motsCles .add("Cabane");
+        motsCles .add("Cabane"); // doublon non autorisé
+        motsCles .add("Muraille");       
+        for(String motCle : motsCles) {
+        	System.out.println(motCle);
+        }                    
+
+        Set<String> motsCles2 = new LinkedHashSet<String>();
+        motsCles2.add("Cabane");
+        for(String motCle2 : motsCles2) {
+        	System.out.println(motCle2);
+        }    
+        if(motsCles2.contains("Cabane")) {
+        	System.out.println("Le mot clé Cabane est présent !");
+        	motsCles2.remove("Cabane");
+        }
+                            
+        Map<Bloc, Integer> quantiteBloc= new HashMap<Bloc, Integer>();
+        quantiteBloc.put(new Mur(1,1,1,true), 4);
+        quantiteBloc.put(new Porte(1,1,1,false), 4);       
+        Set<Bloc> cles = quantiteBloc.keySet();
+        for(Bloc bloc : cles) {
+        	Integer valeur = quantiteBloc.get(bloc);
+        	System.out.println(bloc.getClass().getName() + " : " + valeur);
+        }
+            
+           
+       Kit kitDeDemarrage = new Kit();
+       kitDeDemarrage.afficherKit();
+
+
+       Kit kitDefectueux = new Kit();
+       kitDefectueux.getMotsCles().remove("Cabane");
+       kitDefectueux.getMotsCles().remove("Muraille");
+       try {
+    	   Set<String> MotsClesDefectueux = kitDefectueux.getMotsCles();
+    	   System.out.println(MotsClesDefectueux);
+          } catch (NullPointerException exception) {
+        	  System.out.println("Liste de mots clés indisponible dans kitDefectueux");
+          }
+    	  
+           
+       
+        
+        
 }
 
     
