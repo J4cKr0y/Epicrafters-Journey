@@ -20,10 +20,16 @@ Le projet met l’accent sur le crafting, l’exploration et la progression du j
 
 ## Architecture du Projet 
 Epicrafters-Journey/ 
+
 │ ├── src/ 
+
 │ └── EpicraftersJourney/ # Code source principal du jeu 
+
 ├── bin/ 
-│ └── EpicraftersJourney/ # Fichiers compilés Le code source est principalement situé dans src/EpicraftersJourney/. 
+
+│ └── EpicraftersJourney/ # Fichiers compilés 
+
+Le code source est principalement situé dans src/EpicraftersJourney/. 
 
 ## Par quoi commencer ? 
 - Jouer (exécution locale) Aucune version jouable en ligne n’est disponible pour le moment. 
